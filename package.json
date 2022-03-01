@@ -1,0 +1,16 @@
+{
+  "name": "js-stack-utility",
+  "version": "1.0.0",
+  "description": "javascript utility stack es5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "utility",
+    "blockStack"
+  ],
+  "author": "cooking_bird",
+  "license": "MIT"
+}
