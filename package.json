@@ -2,7 +2,8 @@
   "name": "js-stack-utility",
   "version": "1.0.0",
   "description": "javascript utility stack es5",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "types",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +13,11 @@
     "blockStack"
   ],
   "author": "cooking_bird",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
 }
