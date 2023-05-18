@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "javascript utility stack es5",
   "main": "dist/index.js",
-  "types": "types",
+  "types": "dist",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish:major": "npm version major && npm publish",

@@ -1,8 +1,9 @@
-export declare class Stack {
+export declare class Stack<T> {
     private isBlocked;
     private waiters;
-    ready<R>(param?: R): Promise<R | undefined>;
-    setReady<R>(param?: R): void;
+    private payload;
+    ready(): Promise<T>;
+    setReady(param: T): void;
     setBlock(): void;
 }
 export default Stack;

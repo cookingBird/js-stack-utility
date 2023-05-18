@@ -1,10 +1,10 @@
 type Resolver<R> = (params: R) => void;
-export class Stack<T | undefined> {
+export class Stack<T> {
   private isBlocked: boolean = true;
-  private waiters: Resolver<T | undefined>[] = [];
-  private payload: T | undefined;
-  ready(): Promise<T | undefined> {
-    return new Promise((resolve: Resolver<T | undefined>) => {
+  private waiters: Resolver<T>[] = [];
+  private payload: T;
+  ready(): Promise<T> {
+    return new Promise((resolve: Resolver<T>) => {
       if (!this.isBlocked) {
         resolve(this.payload);
       } else {
@@ -12,12 +12,12 @@ export class Stack<T | undefined> {
       }
     });
   }
-  setReady(param?: T): void {
+  setReady(param: T): void {
     this.isBlocked = false;
     this.payload = param;
     if (this.waiters.length === 0) return;
     while (this.waiters.length) {
-      const waiter = this.waiters.shift() as Resolver<T | undefined>;
+      const waiter = this.waiters.shift() as Resolver<T>;
       waiter(param);
     }
   }
